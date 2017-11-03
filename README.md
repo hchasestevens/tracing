@@ -4,6 +4,10 @@ Utilities for tracing program execution line-by-line.
 
 <img src="demo.gif" width="642">
 
+## Installation
+
+`pip install tracing`
+
 ## Usage
 
 Within code:
