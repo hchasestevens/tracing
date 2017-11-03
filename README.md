@@ -23,3 +23,8 @@ In [0]: import tracing
 
 In [1]: %trace enable
 ```
+
+## Contacts
+
+* Name: [H. Chase Stevens](http://www.chasestevens.com)
+* Twitter: [@hchasestevens](https://twitter.com/hchasestevens)
