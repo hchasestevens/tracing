@@ -13,6 +13,7 @@ with tracing():
 
 Within an IPython shell:
 ```python
-In[0]: import tracing
-In[1]: %trace enable
+In [0]: import tracing
+
+In [1]: %trace enable
 ```
