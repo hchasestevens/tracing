@@ -2,6 +2,8 @@
 
 Utilities for tracing program execution line-by-line.
 
+![demo](demo.gif)
+
 ## Usage
 
 Within code:
