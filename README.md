@@ -2,7 +2,7 @@
 
 Utilities for tracing program execution line-by-line.
 
-![demo](demo.gif)
+<img src="demo.gif" width="642">
 
 ## Usage
 
