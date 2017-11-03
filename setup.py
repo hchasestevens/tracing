@@ -4,7 +4,7 @@ setup(
     name='tracing',
     packages=['tracing'],
     version='0.1.0',
-    description='Program execution tracing utilities.',
+    description='Utilities for tracing program execution.',
     license='MIT',
     author='H. Chase Stevens',
     author_email='chase@chasestevens.com',
