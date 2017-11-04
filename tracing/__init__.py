@@ -5,7 +5,7 @@ from functools import partial
 try:
     from IPython.core.magic import register_line_magic
 except ImportError:
-    register_line_magic = None
+    pass
 
 
 @contextmanager
@@ -43,18 +43,22 @@ def redirect_stdout(out):
         sys.stdout = orig_stdout
 
 
-if callable(register_line_magic):
-    @register_line_magic
-    def trace(line):
-        """Usage: %trace (enable|disable) [file pattern] [output path]"""
-        args = line.split()
-        enable = args[0] in {'enable', 'on'}
+def trace(line):
+    """Usage: %trace (enable|disable) [file pattern] [output path]"""
+    args = line.split()
+    enable = args[0] in {'enable', 'on'}
 
-        if not enable:
-            sys.settrace(None)
-            sys.stdout = sys.__stdout__
-            return
+    if not enable:
+        sys.settrace(None)
+        sys.stdout = sys.__stdout__
+        return
 
-        pattern = args[1] if len(args) > 1 else None
-        sys.stdout = open(args[2], 'a') if len(args) > 2 else sys.stdout
-        sys.settrace(partial(trace_line, pattern))
+    pattern = args[1] if len(args) > 1 else None
+    sys.stdout = open(args[2], 'a') if len(args) > 2 else sys.stdout
+    sys.settrace(partial(trace_line, pattern))        
+
+
+try:
+    register_line_magic(trace)
+except NameError:
+    pass
