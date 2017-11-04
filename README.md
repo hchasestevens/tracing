@@ -2,6 +2,12 @@
 
 Utilities for tracing program execution line-by-line.
 
+<img src="demo.gif" width="642">
+
+## Installation
+
+`pip install tracing`
+
 ## Usage
 
 Within code:
@@ -17,3 +23,8 @@ In [0]: import tracing
 
 In [1]: %trace enable
 ```
+
+## Contacts
+
+* Name: [H. Chase Stevens](http://www.chasestevens.com)
+* Twitter: [@hchasestevens](https://twitter.com/hchasestevens)
