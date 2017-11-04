@@ -1,4 +1,7 @@
+from __future__ import print_function
+
 import sys
+from fnmatch import fnmatch
 from contextlib import contextmanager
 from functools import partial
 
@@ -44,6 +47,8 @@ def redirect_stdout(out):
 
 
 if callable(register_line_magic):
+    _ORIGINAL_STDOUT = sys.stdout
+
     @register_line_magic
     def trace(line):
         """Usage: %trace (enable|disable) [file pattern] [output path]"""
@@ -52,7 +57,7 @@ if callable(register_line_magic):
 
         if not enable:
             sys.settrace(None)
-            sys.stdout = sys.__stdout__
+            sys.stdout = _ORIGINAL_STDOUT
             return
 
         pattern = args[1] if len(args) > 1 else None
