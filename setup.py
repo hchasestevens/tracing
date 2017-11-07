@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='tracing',
     packages=['tracing'],
-    version='0.1.2',
+    version='0.1.3',
     description='Utilities for tracing program execution.',
     license='MIT',
     author='H. Chase Stevens',

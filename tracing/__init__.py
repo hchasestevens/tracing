@@ -36,6 +36,7 @@ def trace_line(pattern, frame, event, arg):
         print("{0.f_code.co_filename}: {0.f_lineno}".format(frame))
     except Exception:
         pass
+    return partial(trace_line, pattern)
 
 
 @contextmanager
