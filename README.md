@@ -1,7 +1,7 @@
 # tracing
 
 [![PyPI version](https://badge.fury.io/py/tracing.svg)](https://badge.fury.io/py/tracing)
-![Liberapay receiving](https://img.shields.io/liberapay/receives/hchasestevens.svg)
+[![Liberapay receiving](https://img.shields.io/liberapay/receives/hchasestevens.svg)](https://liberapay.com/hchasestevens/)
 
 Utilities for tracing program execution line-by-line.
 
